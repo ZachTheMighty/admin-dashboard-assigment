@@ -88,15 +88,11 @@ header {
 
   display: grid;
   grid-template-rows: 1fr 1fr;
+  padding-bottom: 15px;
 }
 
 header img[src*="icons"] {
   width: 1.2rem;
-}
-
-header img[src*="images"] {
-  width: 40px;
-  border-radius: 50%;
 }
 
 .head-1 {
@@ -119,10 +115,56 @@ header img[src*="images"] {
   font-weight: 700;
 }
 
+.head-1 img[src*="images"] {
+  width: 40px;
+  border-radius: 50%;
+}
+
 input {
   width: 500px;
   padding: 5px;
   border: 0;
   border-radius: 20px;
   background-color: #e2e8f0;
+}
+
+.head-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5rem;
+}
+
+.head-2 img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.head-2 p {
+  font-weight: 700;
+}
+
+.head-2 p span {
+  font-size: 0.8em;
+}
+
+.head-2 > div:nth-child(1) {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.head-2 > div:nth-child(2) {
+  display: flex;
+  gap: 32px;
+}
+
+button {
+  background-color: #1992d4;
+  color: white;
+  padding: 8px 28px;
+  border: 0;
+  border-radius: 20px;
+  font-weight: 700;
 }
