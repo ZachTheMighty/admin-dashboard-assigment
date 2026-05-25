@@ -91,8 +91,9 @@ header {
   padding-bottom: 15px;
 }
 
-header img[src*="icons"] {
-  width: 1.2rem;
+header img[src*="icons"],
+section img[src*="icons"] {
+  width: 1.5rem;
 }
 
 .head-1 {
@@ -167,4 +168,55 @@ button {
   border: 0;
   border-radius: 20px;
   font-weight: 700;
+}
+
+main > section {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  padding: 4.5rem 2rem 4rem 2rem;
+  gap: 24px;
+}
+
+section section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  position: relative;
+}
+
+section section > h3 {
+  position: absolute;
+  z-index: 1;
+  top: -60px;
+  left: -10px;
+}
+
+.card {
+  background-color: white;
+  box-shadow:
+    #f0b429 -10px 0px 0px,
+    0px 0px 5px -1px rgba(0, 0, 0, 0.48);
+  padding: 24px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.card h3,
+p {
+  margin: 0;
+}
+
+.card p {
+  color: #636363;
+  margin-bottom: 4rem;
+}
+
+.card span {
+  position: absolute;
+  right: 24px;
+  bottom: 24px;
+}
+
+.card span img + img {
+  margin-left: 24px;
 }
