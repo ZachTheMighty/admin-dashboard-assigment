@@ -1,3 +1,7 @@
+:root {
+  --main-color: #e2e8f0;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -76,7 +80,7 @@ li img {
 }
 
 main {
-  background-color: #e2e8f0;
+  background-color: var(--main-color);
   display: grid;
   grid-template-rows: 1fr 4fr;
 }
@@ -126,7 +130,7 @@ input {
   padding: 5px;
   border: 0;
   border-radius: 20px;
-  background-color: #e2e8f0;
+  background-color: var(--main-color);
 }
 
 .head-2 {
@@ -172,7 +176,7 @@ button {
 
 main > section {
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 2fr 1fr;
   padding: 4.5rem 2rem 4rem 2rem;
   gap: 24px;
 }
@@ -191,7 +195,7 @@ section section > h3 {
   left: -10px;
 }
 
-.card {
+section > .card {
   background-color: white;
   box-shadow:
     #f0b429 -10px 0px 0px,
@@ -201,22 +205,82 @@ section section > h3 {
   position: relative;
 }
 
-.card h3,
+section > .card h3,
 p {
   margin: 0;
 }
 
-.card p {
+section > .card p {
   color: #636363;
   margin-bottom: 4rem;
 }
 
-.card span {
+section > .card span {
   position: absolute;
   right: 24px;
   bottom: 24px;
 }
 
-.card span img + img {
+section > .card span img + img {
   margin-left: 24px;
+}
+
+section aside {
+  background-color: var(--main-color);
+  color: black;
+  display: grid;
+  position: relative;
+}
+
+aside > .card {
+  background-color: white;
+  padding: 2rem;
+  padding-bottom: 1rem;
+  font-size: .9rem;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px -1px rgba(0, 0, 0, 0.48);
+}
+
+aside > .card img {
+  width: 40px;
+  border-radius: 50%;
+}
+
+aside > .card:last-child > div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+aside > .card:last-child > div p:first-of-type
+{
+  color: black;
+  font-weight: 500;
+}
+
+section aside h3
+{
+  margin: 0;
+}
+
+section > aside > h3:first-of-type {
+  position: absolute;
+  top: -40px;
+}
+
+.card div p {
+  color: #636363;
+  font-weight: 400;
+}
+
+.card hr {
+  margin: 1rem 0;
+  opacity: .5;
+}
+
+section > aside > h3:nth-of-type(2)
+{
+  margin-top: 2rem;
+  margin-bottom: .5rem;
 }
